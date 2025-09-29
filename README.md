@@ -23,9 +23,3 @@ This project follows the `@Model`, `@Query`, and `@Observable` pattern using Swi
 1. Copy `Config.template.plist` to `Config.plist`
 2. Replace `YOUR_API_URL_HERE` with your actual API URL
 3. Modify the code to read from the plist file instead of environment variables
-
-### Security Note
-
-- The `.gitignore` file is configured to exclude Xcode schemes and configuration files
-- Never commit sensitive URLs or API keys to version control
-- Each developer should configure their own environment variables locally
