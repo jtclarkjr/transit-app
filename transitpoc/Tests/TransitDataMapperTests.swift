@@ -10,7 +10,7 @@ import Foundation
 class TransitDataMapperTests {
     
     static func testAPIMapping() {
-        print("🧪 Testing Transit API Data Mapping...")
+        print("Testing Transit API Data Mapping...")
         
         // Sample API response JSON (simplified version of the real response)
         let jsonString = """
@@ -89,19 +89,19 @@ class TransitDataMapperTests {
         """
         
         guard let jsonData = jsonString.data(using: .utf8) else {
-            print("❌ Failed to create JSON data")
+            print("Failed to create JSON data")
             return
         }
         
         do {
             let response = try JSONDecoder().decode(TransitResponse.self, from: jsonData)
-            print("✅ JSON decoded successfully")
+            print("JSON decoded successfully")
             
             let routes = TransitDataMapper.shared.mapTransitResponse(response)
-            print("✅ Mapped \(routes.count) routes")
+            print("Mapped \(routes.count) routes")
             
             if let firstRoute = routes.first {
-                print("📊 Route Details:")
+                print("Route Details:")
                 print("   From: \(firstRoute.from)")
                 print("   To: \(firstRoute.to)")
                 print("   Duration: \(firstRoute.durationText)")
@@ -125,7 +125,7 @@ class TransitDataMapperTests {
             }
             
         } catch {
-            print("❌ Failed to parse JSON: \(error)")
+            print("Failed to parse JSON: \(error)")
         }
     }
 }

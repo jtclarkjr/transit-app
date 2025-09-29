@@ -1,10 +1,14 @@
-# Transit POC Setup
+# Transit POC
 
 ## API Configuration
 
 This project requires an API base URL to be configured. The URL is not stored in version control for security reasons.
 
-### Option 1: Xcode Environment Variables (Recommended)
+# Architectural Pattern
+
+This project follows the `@Model`, `@Query`, and `@Observable` pattern using SwiftData for data management and state updates. This approach ensures a modern, reactive architecture for handling models, queries, and observable state in SwiftUI.
+
+### Xcode Environment Variables (Recommended)
 
 1. In Xcode, go to **Product** → **Scheme** → **Edit Scheme...**
 2. Select **Run** in the left sidebar
@@ -12,9 +16,9 @@ This project requires an API base URL to be configured. The URL is not stored in
 4. Under **Environment Variables**, click the **+** button
 5. Add:
    - **Name**: `TRANSIT_API_BASE_URL`
-   - **Value**: Your actual API URL
+   - **Value**: Your actual API URL (deployed version of /jtclarkjr/transit-api-jp repo)
 
-### Option 2: Configuration File
+### Configuration File (If not via Xcode)
 
 1. Copy `Config.template.plist` to `Config.plist`
 2. Replace `YOUR_API_URL_HERE` with your actual API URL
